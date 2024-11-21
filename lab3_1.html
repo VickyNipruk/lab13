@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Дні тижня</title>
+    
+</head>
+<body>
+
+<h1 style="margin: auto;">Дні тижня</h1>
+<div id="days-container"></div>
+
+<script>
+    const daysOfWeek = ["Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя"];
+
+    const fontSizes = ["50px", "45px", "35px", "30px", "24px", "19px", "15px"];
+    
+    const colors = ["green", "orange", "black", "blue", "indigo", "red", "white"];
+
+    const container = document.getElementById("days-container");
+
+    daysOfWeek.forEach((day, index) => {
+        const dayElement = document.createElement("div");
+        dayElement.className = "day";
+        dayElement.textContent = day;
+        
+        dayElement.style.fontSize = fontSizes[index];
+        dayElement.style.color = colors[index];
+        
+        container.appendChild(dayElement);
+    });
+</script>
+
+<div class="return">
+    <a href="index.html" class="button">Повернутись на головну</a>
+</div>
+
+</body>
+</html>

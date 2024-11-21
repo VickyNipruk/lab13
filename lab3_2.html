@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+		<title>Визначення часу</title>
+	</head>	
+	<body>
+        <h1 style="color: blueviolet;">Визначення скільки часу залишилось до 1 вересня</h1>
+		<script>
+			"use strict";
+			let today = new Date();
+			let currentYear = today.getFullYear();
+			let firstSeptember = new Date(currentYear + 1, 8, 1);
+			const day = 86400000;   
+			const hour = 3600000; 
+			const minute = 60000;  
+			let time = firstSeptember.getTime() - today.getTime(); 
+			let days = Math.floor(time / day);
+			let hours = Math.floor((time - days * day) / hour);
+			let minutes = Math.floor((time - days * day - hours * hour) / minute);
+			
+			let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+			console.log("До 1 вересня залишилося ", str);
+			alert("До 1 вересня залишилося " + str);
+		</script>
+
+        <div class="return">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+	</body>
+</html>

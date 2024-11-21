@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+		<title>Функція, як аргумент іншої функції</title>
+	</head>	
+	<body>
+		<script>
+			function AreaSideSurface(r, h) { 
+				return r * h;
+			}
+			
+			function AreaBase(r) {
+				return 3.14 * r * r;
+			}
+		
+			function calculate(AreaBase, AreaSideSurface) { 
+				return AreaSideSurface + (2 * AreaBase);
+			}
+			
+            let baseArea = AreaBase(7); 
+			let sideArea = AreaSideSurface(7, 13);
+			let totalArea = calculate(baseArea, sideArea); 
+			
+			document.write(`<h2 style="color: black;">Загальна площа циліндра: ${totalArea}</h2>`);
+		</script>
+
+        <div class="return">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+	</body>
+</html>

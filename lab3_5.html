@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+		<title>Функція з необов'язковим параметром</title>
+	</head>	
+	<body>
+        <h1>Функції з використанням необов'язкових параметрів</h1>
+		<script>
+			"use strict";
+			function printStyledText(txt, size = 14, color = "black") {
+				document.write(`<div style="font-size:${size}pt; color:${color}">${txt}</div>`);
+			}
+
+			printStyledText("Перший рядок", 32, "red");
+			printStyledText("Другий рядок");
+			printStyledText("Третій рядок",44, "green");
+			printStyledText("Четвертий рядок", 18, "yellow");
+			printStyledText("П'ятий рядок", 20);
+		</script>
+
+        <div class="return">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+	</body>
+</html>

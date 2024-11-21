@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <link href="css/style.css" rel="stylesheet">
+		<title>Через змінну</title>
+	</head>	
+	<body>
+		<script>
+			function multiply(a, b) { 
+				return a * b; 
+			}
+			
+			let operation = multiply; 
+			
+			let result1 = operation(5, 3);
+			let result2 = multiply(4, 2);
+
+			document.write("<h3>Результат операції через змінну: " + result1 + "</h3>");
+			document.write("<h3>Результат операції через функцію: " + result2 + "</h3>");
+		</script>
+
+        <div class="return">
+            <a href="index.html" class="button">Повернутись на головну</a>
+        </div>
+	</body>
+</html>
